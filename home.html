@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        .scroll-arrow {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .scroll-arrow a {
+            text-decoration: none;
+            color: #a57f65; 
+            font-size: 2.5em;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="login.html">Log In</a></li> 
+        </ul>
+    </nav>
+
+    <section class="banner">
+        <h1>Welcome to Delicious Recipes</h1>
+    </section>
+
+    <div class="scroll-arrow">
+        <a href="#featured-recipe">&#x21E3;</a>
+    </div>
+
+    <section class="featured-recipe" id="featured-recipe">
+        <h2>Featured Recipe</h2>
+        <div class="recipe-boxes">
+            <div class="recipe-box">Recipe 1</div>
+            <div class="recipe-box">Recipe 2</div>
+            <div class="recipe-box">Recipe 3</div>
+            <div class="recipe-box">Recipe 4</div>
+        </div>
+    </section>
+
+    <section class="recommended-videos">
+        <h2>Recommended Videos</h2>
+        <div class="video-boxes">
+            <div class="video-box">Video 1</div>
+            <div class="video-box">Video 2</div>
+            <div class="video-box">Video 3</div>
+        </div>
+    </section>
+
+    <section class="pic-content-section">
+        <div class="pic-content-box">
+            <div class="pic-box">Pic 1</div>
+            <div class="content-box">Content 1</div>
+        </div>
+        <div class="pic-content-box">
+            <div class="pic-box">Pic 2</div>
+            <div class="content-box">Content 2</div>
+        </div>
+        <div class="pic-content-box">
+            <div class="pic-box">Pic 3</div>
+            <div class="content-box">Content 3</div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <p>&copy; 2024 Delicious Recipes. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
