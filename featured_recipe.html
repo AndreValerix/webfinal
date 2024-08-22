@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .navbar {
+            display: flex;
+            background-color: #6b4f3a;
+            padding: 10px;
+            justify-content: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+        .navbar a:hover {
+            background-color: #8c6e56;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .recipe, .profile {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            width: 45%;
+        }
+        .recipe img {
+            width: 100%;
+        }
+        .step {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: #d9b99b;
+        }
+        .profile .name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Recipe</a>
+        <a href="#">Videos</a>
+        <a href="#">Login</a>
+    </div>
+    <div class="container">
+        <div class="recipe">
+            <h2>Featured Recipe</h2>
+            <img src="c:/Users/Asus/Downloads/images.jpg" alt="Cookie">
+            <div class="ingredients">
+                <label><input type="checkbox"> 1/4 cup salt</label><br>
+                <label><input type="checkbox"> 2 cups flour</label><br>
+                <label><input type="checkbox"> 3 cups water</label><br>
+                <label><input type="checkbox"> 1 chocolate</label><br>
+                <label><input type="checkbox"> 1/2 cup candy</label><br>
+                <label><input type="checkbox"> 2 eggs</label><br>
+                <label><input type="checkbox"> 8 cups sugar</label><br>
+            </div>
+            <div class="step">Step 1: Description of the step goes here.</div>
+            <div class="step">Step 2: Description of the step goes here.</div>
+            <div class="step">Step 3: Description of the step goes here.</div>
+        </div>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture">
+            <div class="name">Name</div>
+            <p>What's for dinner? Whether it's coming from your own tired brain or a family full of hungry askers, let's help you get that question answered.</p>
+        </div>
+    </div>
+</body>
+</html>
