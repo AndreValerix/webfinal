@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
+    <title>Login - Recipe Website</title>
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <section class="auth-container">
-        <h2>Log In</h2>
-        <form action="log-in.php" method="post">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit" class="auth-button">Log In</button>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="Sign_up.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <h1>Login to Crumbly</h1>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Log In</button>
         </form>
-        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
-    </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Delicious Recipes. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
