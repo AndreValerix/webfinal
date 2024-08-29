@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Website</title>
     <link rel="stylesheet" href="home.css">
+    <script src="pagination.js" defer></script>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">Videos</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#videos-section">Videos</a></li> <!-- Updated -->
+            <li><a href="#recipes-section">Recipes</a></li> <!-- Updated -->
             <li><a href="Sign_up.html">Sign Up</a></li> 
         </ul>
     </nav>
+    
 
     <!-- Banner Section -->
     <section class="banner">
@@ -34,7 +36,7 @@
     <!-- Featured Recipe Section -->
     <section class="featured-recipe" id="featured-recipe">
         <div class="recipe-list">
-            <h2>Beginner Level Recipe</h2>
+            <li><a href="beginner.html">Beginner Level Recipe</a></li>             
             <div class="recipe-item">
                 <img src="c:/Users/Asus/Downloads/images.jpg" alt="Recipe 1 Image">
                 <div class="recipe-box">
@@ -42,7 +44,7 @@
                     <p>"What's for dinner?" Gah! That question! Whether it's coming from your own tired brain or a family full of hungry askers, let's help you get that question answered!</p>
                 </div>
             </div>
-            <h2>Intermediate Level Recipe</h2>
+            <li><a href="intermediate.html">Intermediate Level Recipe</a></li>             
             <div class="recipe-item">
                 <img src="c:/Users/Asus/Downloads/images.jpg" alt="Recipe 2 Image">
                 <div class="recipe-box">
@@ -50,7 +52,7 @@
                     <p>"What's for dinner?" Gah! That question! Whether it's coming from your own tired brain or a family full of hungry askers, let's help you get that question answered!</p>
                 </div>
             </div>
-            <h2>Advanced Level Recipe</h2>
+            <li><a href="advanced.html">Advanced Level Recipe</a></li>             
             <div class="recipe-item">
                 <img src="c:/Users/Asus/Downloads/images.jpg" alt="Recipe 3 Image">
                 <div class="recipe-box">
@@ -61,62 +63,173 @@
         </div>
     </section>
 
+    
     <!-- Recommended Videos Section -->
-    <section class="recommended-videos">
+    <section class="recommended-videos" id="videos-section">
         <h2>Recommended Videos</h2>
         <div class="video-boxes">
-            <div class="video-box">Video 1</div>
-            <div class="video-box">Video 2</div>
-            <div class="video-box">Video 3</div>
+            <!-- Video 1 -->
+            <div class="video-box">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/rbHIj9kMBYY" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+            </div>
+            <!-- Video 2 -->
+            <div class="video-box">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/SKDU5PTQwYg" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+            </div>
+            <!-- Video 3 -->
+            <div class="video-box">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/0exWBGoe-3A" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+            </div>
         </div>
     </section>
 
     <!-- Picture and Content Section -->
-    <section class="pic-content-section">
-        <div class="pic-content-grid">
-            <div class="pic-content-box">
+    <section class="pic-content-section" id="recipes-section">
+        <div class="pic-content-grid" data-page="1">
+            <!-- Page 1 -->
+            <div class="pic-content-box" data-page="1">
                 <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 1 Image">
                 <div class="content-box">
-                    <h3>Featured Recipe</h3>
-                    <p>"What's for dinner?" Gah! That question! Whether it's coming from your own tired brain or a family full of hungry askers, let's help you get that question answered!</p>                </div>
+                    <h3>Featured Recipe 1</h3>
+                    <p>Description for recipe 1.</p>
+                </div>
             </div>
-            <div class="pic-content-box">
+            <div class="pic-content-box" data-page="1">
                 <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 2 Image">
                 <div class="content-box">
-                    <h3>Featured Recipe</h3>
-                    <p>"What's for dinner?" Gah! That question! Whether it's coming from your own tired brain or a family full of hungry askers, let's help you get that question answered!</p>                </div>
+                    <h3>Featured Recipe 2</h3>
+                    <p>Description for recipe 2.</p>
+                </div>
             </div>
-            <div class="pic-content-box">
+            <div class="pic-content-box" data-page="1">
                 <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 3 Image">
                 <div class="content-box">
-                    <h3>Featured Recipe</h3>
-                    <p>"What's for dinner?" Gah! That question! Whether it's coming from your own tired brain or a family full of hungry askers, let's help you get that question answered!</p>                </div>
+                    <h3>Featured Recipe 3</h3>
+                    <p>Description for recipe 3.</p>
+                </div>
             </div>
-            <div class="pic-content-box">
+            <div class="pic-content-box" data-page="1">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 3 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 4</h3>
+                    <p>Description for recipe 4.</p>
+                </div>
+            </div>
+            <div class="pic-content-box" data-page="1">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 3 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 5</h3>
+                    <p>Description for recipe 5.</p>
+                </div>
+            </div>
+            <div class="pic-content-box" data-page="1">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 3 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 6</h3>
+                    <p>Description for recipe 6.</p>
+                </div>
+            </div>
+            <!-- Page 2 -->
+            <div class="pic-content-box" data-page="2">
                 <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 4 Image">
                 <div class="content-box">
-                    <h3>Featured Recipe</h3>
-                    <p>"What's for dinner?" Gah! That question! Whether it's coming from your own tired brain or a family full of hungry askers, let's help you get that question answered!</p>                </div>
+                    <h3>Featured Recipe 7</h3>
+                    <p>Description for recipe 7.</p>
+                </div>
             </div>
-            <div class="pic-content-box">
+            <div class="pic-content-box" data-page="2">
                 <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 5 Image">
                 <div class="content-box">
-                    <h3>Featured Recipe</h3>
-                    <p>"What's for dinner?" Gah! That question! Whether it's coming from your own tired brain or a family full of hungry askers, let's help you get that question answered!</p>                </div>
+                    <h3>Featured Recipe 8</h3>
+                    <p>Description for recipe 8.</p>
+                </div>
             </div>
-            <div class="pic-content-box">
+            <div class="pic-content-box" data-page="2">
                 <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 6 Image">
                 <div class="content-box">
-                    <h3>Featured Recipe</h3>
-                    <p>"What's for dinner?" Gah! That question! Whether it's coming from your own tired brain or a family full of hungry askers, let's help you get that question answered!</p>                </div>
+                    <h3>Featured Recipe 9</h3>
+                    <p>Description for recipe 9.</p>
+                </div>
+            </div>
+            <div class="pic-content-box" data-page="2">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 6 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 10</h3>
+                    <p>Description for recipe 10.</p>
+                </div>
+            </div>
+            <div class="pic-content-box" data-page="2">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 6 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 11</h3>
+                    <p>Description for recipe 11.</p>
+                </div>
+            </div>
+            <div class="pic-content-box" data-page="2">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 6 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 12</h3>
+                    <p>Description for recipe 12.</p>
+                </div>
+            </div>
+            <!-- Page 3 -->
+            <div class="pic-content-box" data-page="3">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 7 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 13</h3>
+                    <p>Description for recipe 13.</p>
+                </div>
+            </div>
+            <div class="pic-content-box" data-page="3">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 8 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 14</h3>
+                    <p>Description for recipe 14.</p>
+                </div>
+            </div>
+            <div class="pic-content-box" data-page="3">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 9 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 15</h3>
+                    <p>Description for recipe 15.</p>
+                </div>
+            </div>
+            <div class="pic-content-box" data-page="3">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 9 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 16</h3>
+                    <p>Description for recipe 16.</p>
+                </div>
+            </div>
+            <div class="pic-content-box" data-page="3">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 9 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 17</h3>
+                    <p>Description for recipe 17.</p>
+                </div>
+            </div>
+            <div class="pic-content-box" data-page="3">
+                <img src="c:/Users/Asus/Downloads/images.jpg" alt="Pic 9 Image">
+                <div class="content-box">
+                    <h3>Featured Recipe 18</h3>
+                    <p>Description for recipe 18.</p>
+                </div>
             </div>
         </div>
         <div class="pagination">
-            <span>←</span>
-            <span>1 2 ... 5</span>
-            <span>→</span>
+            <span id="prev-arrow">←</span>
+            <span id="page-1" class="page-number">1</span>
+            <span id="page-2" class="page-number">2</span>
+            <span id="page-3" class="page-number">3</span>
+            <span id="next-arrow">→</span>
         </div>
-    </section>
+    </section>    
 
     <!-- Footer Section -->
     <footer class="footer">
