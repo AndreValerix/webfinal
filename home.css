@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -105,19 +109,39 @@ h1, h2 {
     background-color: #f7f2ea; /* Light cookie brown */
 }
 
-.recipe-list h2 {
-    text-align: left;
-    margin-bottom: 20px;
-    font-size: x-large;
-    margin-left: 20px;
-}
-
 /* Flex container for recipe items */
 .recipe-list {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between items */
-    padding: 0 15px; /* Add padding for spacing */
+    gap: 10px; /* Space between items */
+    padding: 0 25px; /* Add padding for spacing */
+}
+
+.recipe-list a {
+    font-size: 18px;
+    font-weight: normal;
+    color: #3498db; /* Default text color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.recipe-list a:hover {
+    color: #e74c3c; /* Change text color on hover */
+}
+.recipe-list li {
+    list-style-type: none;
+    margin: 0;
+    padding: 20;
+}
+
+.recipe-list li a {
+    text-decoration: none;
+    color: #5b3a29;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    display: inline-block;
+
 }
 
 .recipe-item {
@@ -131,6 +155,21 @@ h1, h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
     width: 100%; /* Full width of the container */
     height: 200px; /* Fixed height for each recipe item */
+}
+
+.recipe-list li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.recipe-list li a {
+    text-decoration: none;
+    color: #5b3a29;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    display: inline-block;
 }
 
 .recipe-item img {
@@ -164,25 +203,43 @@ h1, h2 {
 /* Recommended Videos Section */
 .recommended-videos {
     background-color: #dac2ab; /* Lighter cookie brown */
-    padding: 30px 0;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.recommended-videos h2 {
+    font-family: 'Pacifico', cursive; /* Playful font for the title */
+    font-size: 2.5em;
+    color: #5e3c3c; /* Darker brown for the title */
+    margin-bottom: 50px;
 }
 
 .video-boxes {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .video-box {
-    width: 250px;
-    height: 150px;
-    background-color: #a57f65; /* Medium cookie brown */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    border-radius: 8px;
+    flex: 1 1 30%;
+    max-width: 300px;
+    background-color: #fff6e5; /* Light beige background */
+    padding: 10px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease;
 }
+
+.video-box:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.video-box iframe {
+    border-radius: 10px; /* Rounded corners for the video */
+    border: 2px solid #5e3c3c; /* Decorative border */
+}
+
 
 /* Picture and Content Section */
 .pic-content-section {
@@ -494,3 +551,33 @@ h1, h2 {
     text-decoration: none;
     font-weight: bold;
 }
+
+.pic-content-box[data-page] {
+    display: none;
+}
+
+.pic-content-box[data-page="1"],
+.pic-content-box[data-page="2"],
+.pic-content-box[data-page="3"] {
+    display: flex;
+}
+
+.pic-content-box.hidden {
+    display: none;
+}
+
+.page-number {
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.page-number.active {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000; /* Optional: Change the color to make it stand out */
+}
+
+
+
