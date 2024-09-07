@@ -20,8 +20,8 @@ session_start(); // Start the session
     <nav class="navbar">
         <ul>
             <li><a href="home.php">Home</a></li>
-            <li><a href="#videos-section">Videos</a></li>
-            <li><a href="#recipes-section">Recipes</a></li>
+            <li><a href="home.php#videos-section">Videos</a></li>
+            <li><a href="home.php#recipes-section">Recipes</a></li>
             <?php if (isset($_SESSION['user_id'])) : ?>
                 <!-- Show account icon if logged in -->
                 <li><a href="account.php"><i class="fa fa-user"></i> Account</a></li>
