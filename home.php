@@ -1,6 +1,11 @@
 <?php
 session_start(); // Start the session
+
+// Check if the user is logged in
+$isLoggedIn = isset($_SESSION['user_id']);
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -122,6 +127,7 @@ session_start(); // Start the session
             </div>
         </div>
     </section>
+    
 
     <!-- Picture and Content Section -->
     <section class="pic-content-section" id="recipes-section">
@@ -241,20 +247,46 @@ session_start(); // Start the session
                     <p>Assorted dumplings and buns served in bamboo steamers.</p>
                 </div>
             </div>
-            <div class="pic-content-box" data-page="3">
-                <img src="img/Chicken Adobo.jpg" alt="Pic 9 Image">
-                <div class="content-box">
-                    <h3><a href="f_recipe.php" class="recipe-link">Chicken Adobo</a></h3>
-                    <p>Filipino-style chicken braised in soy sauce and vinegar.</p>
-                </div>
-            </div>
-            <div class="pic-content-box" data-page="3">
-                <img src="img/sushi_rolls.jpg" alt="Pic 9 Image">
-                <div class="content-box">
-                    <h3><a href="f_recipe.php" class="recipe-link">Sushi Rolls</a></h3>
-                    <p>Rice and seafood rolled in seaweed, requiring precise rolling technique.</p>
-                </div>
-            </div>
+            <!-- User-uploaded recipes -->
+            <?php
+            $mysqli = new mysqli("localhost", "root", "", "recipe_website");
+            if ($mysqli->connect_error) {
+                die("Connection failed: " . $mysqli->connect_error);
+            }
+
+            $query = "SELECT * FROM recipes ORDER BY id DESC";
+            $result = $mysqli->query($query);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $id = htmlspecialchars($row['id']);
+                    $title = htmlspecialchars($row['title']);
+                    $description = htmlspecialchars($row['description']);
+                    $image = htmlspecialchars($row['image']);
+                    ?>
+                    <div class="pic-content-box" data-page="3"> <!-- Adjust data-page as needed -->
+                        <?php if (!empty($image)) { ?>
+                            <img src="uploads/<?php echo $image; ?>" alt="<?php echo $title; ?>">
+                        <?php } ?>
+                        <div class="content-box">
+                            <h3><a href="f_recipe.php" class="recipe-link"><?php echo $title; ?></a></h3>
+                            <p><?php echo $description; ?></p>
+                            <?php if ($isLoggedIn) : ?>
+                                <form method="POST" action="delete_recipe.php">
+                                <input type="hidden" name="recipe_id" value="<?php echo $id; ?>"> <!-- Should match the ID from the database -->
+                                <button type="submit" class="delete-button" onclick="return confirm('Are you sure you want to delete this recipe?');">Delete</button>
+                                </form>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <?php
+                }
+            } else {
+                echo "<p> </p>";
+            }
+
+            $mysqli->close();
+            ?>
         </div>
         <div class="pagination">
             <span id="prev-arrow">←</span>
