@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4e8d0; /* Light beige background */
+    color: #5b3a29;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    margin: 0;
+    color: #3c2a19;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #8c5e3c; /* Darker cookie brown */
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px; /* Adjust margin */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f5e1d0;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Recipe Section */
+.recipe {
+    width: 60%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.ingredients {
+    background-color: #f9f5f0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.ingredients ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ingredients li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ingredients input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Steps Section */
+.step {
+    background-color: #f4e8d0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Profile Section */
+.profile {
+    width: 35%;
+    padding: 20px;
+    background-color: #f9f5f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #8c5e3c;
+}
+
+/* Social Media Section */
+.social-media {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: auto;
+}
+
+.social-media-contact {
+    margin-top: 20px;
+}
+
+.social-media-contact input[type="email"] {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #8c5e3c;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.social-media-contact button {
+    background-color: #8c5e3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.social-media-contact button:hover {
+    background-color: #6f4e28;
+}
+
+/* Recipe Description Section */
+.recipe-description {
+    margin-top: 20px;
+}
+
+.recipe-description textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #8c5e3c;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.recipe-description button {
+    background-color: #8c5e3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.recipe-description button:hover {
+    background-color: #6f4e28;
+}
+
+/* Footer */
+.footer {
+    background-color: #8c5e3c;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f7f2ea, #f4e8d0); /* Gradient background */
+    color: #5b3a29;
+    line-height: 1.6; /* Increase line-height for readability */
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    margin: 0;
+    color: #3c2a19; /* Darker cookie brown for headings */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #8c5e3c; /* Slightly darker cookie brown */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px; /* Increased spacing for better visibility */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px; /* Larger font size for readability */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.navbar ul li a:hover {
+    color: #f5e1d0; /* Light color on hover */
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #D9C3B2; /* Light cookie brown for the profile section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    margin: 20px auto;
+    max-width: 1200px; /* Maximum width for large screens */
+}
+
+.pfp {
+    width: 40%;
+    background-color: #D3D3D3; /* Light gray background */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.pfp img {
+    max-width: 80%;
+    height: auto; /* Ensure the image scales with its container */
+    border-radius: 50%; /* Circular profile picture */
+    border: 3px solid #8c5e3c; /* Border around profile picture */
+}
+
+.about-me {
+    width: 55%;
+    padding: 20px;
+    background-color: #fdfdfd; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.about-me h2 {
+    margin-bottom: 10px;
+}
+
+.about-me img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-top: 20px; /* Space above the image */
+}
+
+/* Back and Social Section */
+.back-social {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #8B5E3C; /* Darker cookie brown for contrast */
+    color: white;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto;
+    max-width: 1200px; /* Maximum width for large screens */
+}
+
+.back a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.back a:hover {
+    color: #F5E1D0; /* Lighter color on hover */
+}
+
+.social {
+    display: flex;
+    gap: 15px; /* Increased gap for better spacing */
+}
+
+.social img {
+    width: 30px; /* Larger icons for better visibility */
+    height: 30px;
+    vertical-align: middle;
+    transition: opacity 0.3s;
+}
+
+.social img:hover {
+    opacity: 0.8; /* Slight fade effect on hover */
+}
+
+/* Other People Section */
+.other-people {
+    background-color: #D9C3B2; /* Light cookie brown for the section */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto;
+    max-width: 1200px; /* Maximum width for large screens */
+}
+
+.people {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.person {
+    text-align: center;
+}
+
+.circle {
+    width: 120px; /* Slightly larger circle */
+    height: 150px;
+    background-color: #D3D3D3; /* Light gray background */
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #8c5e3c; /* Border around the circle */
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures image covers the circle */
+}
+
+/* Footer */
+.footer {
+    background-color: #8c5e3c; /* Slightly darker cookie brown */
+    padding: 20px 0;
+    color: #ffffff;
+    text-align: center;
+    border-top: 3px solid #5b3a29; /* Darker border on top */
+}

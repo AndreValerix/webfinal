@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4e8d0; /* Light beige background */
+    color: #5b3a29;
+    line-height: 1.6;
+    min-height: 100vh; /* Ensure the body takes full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    margin: 0;
+    color: #3c2a19;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Slightly larger for emphasis */
+}
+
+h4 {
+    font-size: 1.4em; /* Larger for better readability */
+    margin-bottom: 15px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #8c5e3c; /* Darker cookie brown */
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px; /* Adjusted margin for more spacing */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px; /* Slightly larger font size */
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f5e1d0;
+}
+
+/* Container */
+.container {
+    flex: 1; /* Allows container to grow and push footer down */
+    padding: 20px;
+}
+
+/* Upload Recipe */
+.upload-recipe {
+    background-color: #fff;
+    padding: 25px; /* Increased padding for more space */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+}
+
+.upload-recipe h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #3c2a19; /* Darker color for labels */
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for more comfort */
+    border: 1px solid #ccc; /* Light border for input fields */
+    border-radius: 6px; /* Rounded corners */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group button {
+    background-color: #8c5e3c;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Increased padding for buttons */
+    font-size: 18px; /* Larger font size for readability */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+.footer {
+    background-color: #8c5e3c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
