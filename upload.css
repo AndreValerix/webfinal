@@ -1,36 +1,40 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* General Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4e8d0; /* Light beige background */
-    color: #5b3a29;
-    line-height: 1.6;
-    min-height: 100vh; /* Ensure the body takes full viewport height */
-    display: flex;
-    flex-direction: column;
+    line-height: 1.6; /* Increase line-height for readability */
 }
 
 h1, h2, h3, h4 {
     text-align: center;
     margin: 0;
-    color: #3c2a19;
+    color: #3c2a19; /* Darker cookie brown for headings */
+}
+
+h1 {
+    margin-bottom: -20px;
 }
 
 h2 {
-    margin-bottom: 20px;
-    font-size: 2.5em; /* Slightly larger for emphasis */
+    margin-bottom: 0px;
+    font-size: 2em;
 }
 
 h4 {
-    font-size: 1.4em; /* Larger for better readability */
-    margin-bottom: 15px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #8c5e3c; /* Darker cookie brown */
-    padding: 15px 0;
+    background-color: white;
+    color: #3c2a19;
+    padding: 8px 0;/* Slightly more pronounced shadow */
 }
 
 .navbar ul {
@@ -42,83 +46,80 @@ h4 {
 }
 
 .navbar ul li {
-    margin: 0 20px; /* Adjusted margin for more spacing */
+
+    margin: 0 20px; /* Increased spacing for better visibility */
 }
 
 .navbar ul li a {
+    color: #6C4E31;
     text-decoration: none;
-    color: #fff;
+    color: 603F26;
     font-weight: bold;
-    font-size: 20px; /* Slightly larger font size */
-    transition: color 0.3s;
+    font-size: 18px; /* Larger font size for readability */
+    transition: color 0.3s; /* Smooth color transition on hover */
 }
 
 .navbar ul li a:hover {
-    color: #f5e1d0;
+    color: #603F26;
+    text-decoration: underline; /* Light color on hover */
 }
 
-/* Container */
+/* Upload Recipe Section Styles */
+.upload-recipe {
+    background-color: #f8e9eb; /* White background for the form */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .container {
-    flex: 1; /* Allows container to grow and push footer down */
     padding: 20px;
 }
 
-/* Upload Recipe */
-.upload-recipe {
-    background-color: #fff;
-    padding: 25px; /* Increased padding for more space */
-    border-radius: 10px; /* Rounded corners for a softer look */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
-}
-
-.upload-recipe h2 {
-    margin-top: 0;
+.recipe-form {
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group {
-    margin-bottom: 20px; /* Increased margin for better spacing */
+    margin-bottom: 15px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 7px;
     font-weight: bold;
-    color: #3c2a19; /* Darker color for labels */
+    margin-bottom: 5px;
 }
 
-.form-group input[type="text"],
-.form-group input[type="file"],
-.form-group textarea {
+.form-group .form-control {
     width: 100%;
-    padding: 12px; /* Increased padding for more comfort */
-    border: 1px solid #ccc; /* Light border for input fields */
-    border-radius: 6px; /* Rounded corners */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.form-group textarea {
-    resize: vertical;
-}
-
-.form-group button {
-    background-color: #8c5e3c;
-    color: white;
+.submit-btn {
+    background-color: #603F26; /* Light cookie brown */
+    color: #fff;
+    padding: 15px;
     border: none;
-    padding: 12px 20px; /* Increased padding for buttons */
-    font-size: 18px; /* Larger font size for readability */
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.form-group button:hover {
-    background-color: #218838;
+.submit-btn:hover {
+    background-color: #b49b8f; /* Slightly darker cookie brown */
 }
 
 /* Footer */
 .footer {
-    background-color: #8c5e3c;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    width: 100%;
-}
+    /* Dark cookie brown */
+       padding: 20px 0;
+       background-color: #603F26;
+       color: white;
+       text-align: center;
+   }
