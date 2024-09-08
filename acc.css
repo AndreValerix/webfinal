@@ -1,9 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* General Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #f7f2ea, #f4e8d0); /* Gradient background */
+/* Gradient background */
     color: #5b3a29;
     line-height: 1.6; /* Increase line-height for readability */
 }
@@ -24,11 +28,10 @@ h4 {
     margin-bottom: 10px;
 }
 
-/* Navbar */
 .navbar {
-    background-color: #8c5e3c; /* Slightly darker cookie brown */
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
+    background-color: white;
+    color: #3c2a19;
+    padding: 8px 0;/* Slightly more pronounced shadow */
 }
 
 .navbar ul {
@@ -40,21 +43,23 @@ h4 {
 }
 
 .navbar ul li {
+
     margin: 0 20px; /* Increased spacing for better visibility */
 }
 
 .navbar ul li a {
+    color: #6C4E31;
     text-decoration: none;
-    color: #ffffff;
+    color: 603F26;
     font-weight: bold;
     font-size: 18px; /* Larger font size for readability */
     transition: color 0.3s; /* Smooth color transition on hover */
 }
 
 .navbar ul li a:hover {
-    color: #f5e1d0; /* Light color on hover */
+    color: #603F26;
+    text-decoration: underline; /* Light color on hover */
 }
-
 /* Profile Section */
 .profile {
     display: flex;
@@ -69,7 +74,7 @@ h4 {
 
 .pfp {
     width: 40%;
-    background-color: #D3D3D3; /* Light gray background */
+ /* Light gray background */
     text-align: center;
     padding: 20px;
     border-radius: 10px; /* Rounded corners */
@@ -79,7 +84,7 @@ h4 {
     max-width: 80%;
     height: auto; /* Ensure the image scales with its container */
     border-radius: 50%; /* Circular profile picture */
-    border: 3px solid #8c5e3c; /* Border around profile picture */
+    border: 1px solid #8c5e3c; /* Border around profile picture */
 }
 
 .about-me {
@@ -105,23 +110,25 @@ h4 {
     display: flex;
     justify-content: space-between;
     padding: 15px 20px;
-    background-color: #8B5E3C; /* Darker cookie brown for contrast */
+    background-color: white; /* Darker cookie brown for contrast */
     color: white;
     border-radius: 10px; /* Rounded corners */
+    border: 1px solid #6C4E31; /* Add border color here */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     margin: 20px auto;
     max-width: 1200px; /* Maximum width for large screens */
 }
 
+
 .back a {
     text-decoration: none;
-    color: white;
+    color: #6C4E31;
     font-weight: bold;
     transition: color 0.3s; /* Smooth color transition on hover */
 }
 
 .back a:hover {
-    color: #F5E1D0; /* Lighter color on hover */
+    color: #603F26; /* Lighter color on hover */
 }
 
 .social {
@@ -182,9 +189,9 @@ h4 {
 
 /* Footer */
 .footer {
-    background-color: #8c5e3c; /* Slightly darker cookie brown */
-    padding: 20px 0;
-    color: #ffffff;
-    text-align: center;
-    border-top: 3px solid #5b3a29; /* Darker border on top */
-}
+    /* Dark cookie brown */
+       padding: 20px 0;
+       background-color: #603F26;
+       color: white;
+       text-align: center;
+   }
