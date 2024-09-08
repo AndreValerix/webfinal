@@ -7,8 +7,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #f7f2ea, #f4e8d0); /* Gradient background */
-    color: #5b3a29;
     line-height: 1.6; /* Increase line-height for readability */
 }
 
@@ -18,8 +16,12 @@ h1, h2, h3, h4 {
     color: #3c2a19; /* Darker cookie brown for headings */
 }
 
+h1 {
+    margin-bottom: -20px;
+}
+
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     font-size: 2em;
 }
 
@@ -30,9 +32,9 @@ h4 {
 
 /* Navbar */
 .navbar {
-    background-color: #8c5e3c; /* Slightly darker cookie brown */
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
+    background-color: white;
+    color: #3c2a19;
+    padding: 8px 0;/* Slightly more pronounced shadow */
 }
 
 .navbar ul {
@@ -44,30 +46,34 @@ h4 {
 }
 
 .navbar ul li {
+
     margin: 0 20px; /* Increased spacing for better visibility */
 }
 
 .navbar ul li a {
+    color: #6C4E31;
     text-decoration: none;
-    color: #ffffff;
+    color: 603F26;
     font-weight: bold;
     font-size: 18px; /* Larger font size for readability */
     transition: color 0.3s; /* Smooth color transition on hover */
 }
 
 .navbar ul li a:hover {
-    color: #f5e1d0; /* Light color on hover */
+    color: #603F26;
+    text-decoration: underline; /* Light color on hover */
 }
 
 /* Scroll Arrow Style */
 .scroll-arrow {
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 .scroll-arrow a {
     text-decoration: none;
-    color: #8b5e3c; /* Medium cookie brown */
+    color: #6C4E31; /* Medium cookie brown */
     font-size: 2.5em;
     animation: bounce 2s infinite;
 }
@@ -86,19 +92,19 @@ h4 {
 
 /* Banner */
 .banner {
-    background-image:'url(img/banner.jpg)';
+    background-image:url("img\\banner.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 100px 0;
+    padding: 70px 0;
     position: relative;
 }
 
 .banner h1 {
+    color: white;
     font-size: 2.5em;
     position: relative;
     z-index: 2;
-    color: white
 }
 
 .banner::before {
@@ -108,24 +114,21 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Dark overlay */
+    background-color: rgba(0, 0, 0, 0.2);  /* Optional:Dark overlay */
     z-index: 1;
 }
 
 /* Intro Text Section */
 .intro-text {
     text-align: center;
-    padding: 5px 5px;
     font-size: 1.8em; /* Increased font size */
-    color: #5b3a29; /* Dark cookie brown */
-    background-color: #f7f2ea; /* Light cookie brown */
-    margin: 15px 0;
+    color:#6C4E31;
     font-weight: bold; /* Makes the text bold */
 }
 
 /* Featured Recipe Section */
 .featured-recipe {
-    padding: 30px 0;
+    padding: 10px 0;
     background-color: #f7f2ea; /* Light cookie brown */
 }
 
@@ -136,11 +139,15 @@ h4 {
     gap: 10px; /* Space between items */
     padding: 0 25px; /* Add padding for spacing */
 }
-
+.recipe-list li {
+    color:#603F26 ;
+    font-size: 30px;
+    font-weight: bold;
+}
 .recipe-list a {
     font-size: 18px;
     font-weight: normal;
-    color: #3498db; /* Default text color */
+    color:#6C4E31 ; /* Default text color */
     text-decoration: none;
     transition: color 0.3s ease; /* Smooth transition for color change */
 }
@@ -169,11 +176,10 @@ h4 {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    background-color: #a57f65; /* Medium cookie brown */
+    background-color: white; /* Medium cookie brown */
     border-radius: 8px;
     overflow: hidden;
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    border: 1px solid #A67B5B; /* Specify width, style, and color for the border */
     width: 100%; /* Full width of the container */
     height: 200px; /* Fixed height for each recipe item */
 }
@@ -193,10 +199,18 @@ h4 {
     display: inline-block;
 }
 
+.recipe-item:hover {
+    background-color: rgba(204, 179, 166, 0.1);
+}
+
 .recipe-item img {
     flex: 0 0 30%; /* Adjust image size to 30% */
     height: 100%; /* Full height of the parent */
     object-fit: cover; /* Ensure image covers the area */
+}
+
+.recipe-item img {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .recipe-item .recipe-box {
@@ -206,14 +220,16 @@ h4 {
     height: 100%; /* Full height of the parent */
     display: flex;
     flex-direction: column; /* Stack heading and paragraph vertically */
-    justify-content: center; /* Center text vertically */
+    justify-content: left; /* Center text vertically */
 }
 
 /* Heading and Paragraph Styles */
 .recipe-box h3 {
+    color: #6C4E31;
     margin: 0;
     font-size: 1.5em; /* Adjust size as needed */
     margin-bottom: 10px; /* Space between heading and paragraph */
+    text-align: left;
 }
 
 .recipe-box p {
@@ -265,7 +281,7 @@ h4 {
 /* Picture and Content Section */
 .pic-content-section {
     padding: 30px 0;
-    background-color: #f3ebeb; /* Background color for the section */
+ /* Background color for the section */
 }
 
 .pic-content-grid {
@@ -278,7 +294,7 @@ h4 {
 
 .pic-content-box {
     display: flex;
-    background-color: #c6b299; /* Card background color */
+    background-color: #dac2ab; /* Card background color */
     margin: 10px;
     width: 300px; /* Fixed width for each card */
     height: 150px; /* Fixed height for each card */
@@ -293,26 +309,41 @@ h4 {
 
 .content-box {
     padding: 10px;
-    color: #ffffff; /* Text color */
+    color: #6C4E31; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for links inside content boxes */
-.pic-content-box .content-box h3 a {
+.content-box h3 a {
     font-size: 18px; /* Adjust font size if needed */
     font-weight: normal;
     color: #5e3c3c; /* Brown text color */
     text-decoration: none; /* Remove underline */
     transition: color 0.3s ease; /* Smooth transition for color change */
 }
-
+.content-box h3 {
+    text-align: left;
+}
 .pic-content-box .content-box h3 a:hover {
-    color: #e74c3c; /* Change color on hover (e.g., red) */
     text-decoration: none; /* Ensure no underline on hover */
 }
 
 .content-box p {
     margin-top: 5px;
     font-size: 14px;
+}
+
+/* home.css */
+.delete-button {
+    background-color: #603F26;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-button:hover {
+    background-color: darkred;
 }
 
 .pagination {
@@ -328,37 +359,14 @@ h4 {
 
 /* Footer */
 .footer {
-    background-color: #a57f65; /* Dark cookie brown */
+ /* Dark cookie brown */
     padding: 20px 0;
-    color: #ffffff;
+    background-color: #603F26;
+    color: white;
     text-align: center;
 }
 
 /* Sign up Page Styles */
-
-.navbar {
-    background-color: #a57f65; /* Medium cookie brown */
-    padding: 20px 0;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-}
-
 .signup-container {
     max-width: 400px;
     margin: 50px auto;
@@ -444,35 +452,10 @@ h4 {
 }
 
 /* Footer Styles */
-.footer {
-    background-color: #a57f65; /* Light cookie brown */
+.footer {/* Light cookie brown */
     padding: 10px;
     text-align: center;
     margin-top: 20px;
-}
-
-/* Log in Page Styles */
-.navbar {
-    background-color: #a57f65; /* Light cookie brown */
-    padding: 10px;
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar li {
-    margin: 0 15px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #5b3a29; /* Dark cookie brown */
-    font-weight: bold;
 }
 
 /* Log-In Container Styles */
@@ -542,14 +525,6 @@ h4 {
 
 .login-container button:hover {
     background-color: #70503c; /* Darker shade for hover effect */
-}
-
-/* Footer Styles */
-.footer {
-    background-color: #a57f65; /* Light cookie brown */
-    padding: 10px;
-    text-align: center;
-    margin-top: 20px;
 }
 
 .pic-content-box[data-page] {
